@@ -12,7 +12,7 @@ function ChatWidget() {
     setMessages([...messages, { from: 'user', text: input }]);
     setIsLoading(true);
     try {
-      const chatRes = await axios.post('https://chatbotwidgetbackend.vercel.app/chat', { message: input });
+      const chatRes = await axios.post('https://chatbotwidgetbackend-seven.vercel.app/chat', { message: input });
       setMessages(prev => [...prev, { from: 'bot', text: chatRes.data.response }]);
     } catch (error) {
       setMessages(prev => [...prev, { from: 'bot', text: 'Sorry, there was an error processing your request.' }]);
