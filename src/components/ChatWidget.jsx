@@ -13,7 +13,7 @@ function ChatWidget() {
     setIsLoading(true);
     
     try {
-      const chatRes = await axios.post('https://chatbot1-plum-psi.vercel.app/chat', { message: input });
+      const chatRes = await axios.post('https://chatbotwidgetbackend.vercel.app/chat', { message: input });
       setMessages(prev => [...prev, { 
         from: 'bot', 
         text: chatRes.data.response 
